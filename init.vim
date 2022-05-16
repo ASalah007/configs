@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugins')
 " themes
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'chriskempson/base16-vim'
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 
 " scratch buffers
 Plug 'vim-scripts/scratch.vim'
@@ -21,7 +22,6 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
-
 "nerd tree note: used with font ubuntu Mono Nerd Regular size 15
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
@@ -30,7 +30,14 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" vimwiki 
+Plug 'vimwiki/vimwiki'
+
+" commenting
+Plug 'tpope/vim-commentary'
+
 call plug#end()
+
 
 " for lsp
 set completeopt=menu,menuone,noselect
@@ -50,6 +57,10 @@ source ~/.config/nvim/vim/nvimtree.vim
 "note this should be below nvimtree.vim
 "for all lua scripts
 source ~/.config/nvim/req.lua
+
+
+" for vimwiki
+let g:vimwiki_list = [{'path': '~/main/wiki', 'syntax': 'markdown', 'ext': '.md'}]
 
 " for nvimtree
 nnoremap <C-n> :NvimTreeToggle<CR>
