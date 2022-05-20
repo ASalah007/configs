@@ -10,7 +10,6 @@ set nowrap
 set nohls
 set ru
 set cursorline
-colorscheme onehalfdark
 set clipboard=unnamedplus " xclip package must be installed for this to work
 set termguicolors
 

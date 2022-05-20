@@ -5,7 +5,7 @@ let mapleader=" "
 nnoremap <C-n> :Lexplore 30<CR>
 
 " working with buffers
-nnoremap <A-a> gg0vG$
+nnoremap <A-a> gg0yG$
 nnoremap <A-o> :bp<cr>
 nnoremap <A-i> :bn<cr>
 nnoremap <A-w> :bw<cr>
