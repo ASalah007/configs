@@ -1,5 +1,3 @@
-" for lsp
-set completeopt=menu,menuone,noselect
 
 " for vimwiki
 let g:vimwiki_list = [{'path': '~/main/wiki', 'syntax': 'markdown', 'ext': '.md'}]

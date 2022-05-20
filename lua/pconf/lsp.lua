@@ -4,7 +4,7 @@ local keymap = vim.api.nvim_set_keymap
 local function nkeymap(key, map)
     keymap('n', key, map, { noremap = true })
 end
-
+vim.opt.completeopt= {menu,menuone,noselect}
 
 nkeymap('<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
 nkeymap('<leader>af', ':lua vim.lsp.buf.code_action()<cr>')
