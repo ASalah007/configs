@@ -17,3 +17,4 @@ nnoremap <A-d> :bd<cr>
 
 nnoremap <C-s> :w<cr>
 
+nnoremap <leader>g :G 

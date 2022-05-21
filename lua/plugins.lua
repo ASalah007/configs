@@ -2,11 +2,11 @@ return require('packer').startup(function()
 
 use 'wbthomason/packer.nvim'
 --  themes
--- use 'sonph/onehalf', { 'rtp': 'vim' }
--- use 'colors/onedark.vim'
+use {'sonph/onehalf', rtp = 'vim' }
+use 'tpope/vim-vividchalk'
 use 'joshdick/onedark.vim'
 use 'tomasiser/vim-code-dark'
-
+use 'agude/vim-eldar'
 --  scratch buffers
 use 'vim-scripts/scratch.vim'
 
@@ -37,6 +37,9 @@ use 'vimwiki/vimwiki'
 
 --  commenting
 use 'tpope/vim-commentary'
+
+-- git
+use 'tpope/vim-fugitive'
 
 end)
 

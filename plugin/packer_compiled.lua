@@ -129,6 +129,16 @@ _G.packer_plugins = {
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["onedark.vim"] = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/onedark.vim",
+    url = "https://github.com/joshdick/onedark.vim"
+  },
+  onehalf = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/onehalf/vim",
+    url = "https://github.com/sonph/onehalf"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -159,6 +169,16 @@ _G.packer_plugins = {
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-eldar"] = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/vim-eldar",
+    url = "https://github.com/agude/vim-eldar"
+  },
+  ["vim-vividchalk"] = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/vim-vividchalk",
+    url = "https://github.com/tpope/vim-vividchalk"
+  },
   vimwiki = {
     loaded = true,
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/vimwiki",
@@ -167,6 +187,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Runtimepath customization
+time([[Runtimepath customization]], true)
+vim.o.runtimepath = vim.o.runtimepath .. ",/home/asalah007/.local/share/nvim/site/pack/packer/start/onehalf/vim"
+time([[Runtimepath customization]], false)
 if should_profile then save_profiles() end
 
 end)

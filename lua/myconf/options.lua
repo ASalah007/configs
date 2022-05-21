@@ -21,3 +21,4 @@ o.cursorline = true
 o.clipboard="unnamedplus" -- xclip must be installed for this to wrok
 o.termguicolors = true
 
+o.updatetime = 300
