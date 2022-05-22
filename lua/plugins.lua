@@ -41,6 +41,9 @@ use 'tpope/vim-commentary'
 -- git
 use 'tpope/vim-fugitive'
 
+-- vim api
+use 'tjdevries/nlua.nvim'
+
 end)
 
 

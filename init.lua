@@ -1,14 +1,17 @@
-require('plugins')
+require('myconf.mappings')
+require('myconf.options')
+require('myconf.mappings')
+
 require('pconf.lsp')
 require('pconf.nvimtree')
 require('pconf.treesitter')
-require('myconf.mappings')
-require('myconf.options')
+require('plugins')
 
-vim.cmd('source ~/.config/nvim/vim/themes.vim')
-vim.cmd('source ~/.config/nvim/vim/mappings.vim')
-vim.cmd('source ~/.config/nvim/vim/conf.vim')
-vim.cmd('source ~/.config/nvim/vim/nvimtree.vim')
 
-vim.cmd('source ~/.config/nvim/vim/ps.vim')
+local path = ' ~/.config/nvim/vim/'
+vim.cmd('source'..path..'themes.vim')
+vim.cmd('source'..path..'nvimtree.vim')
+vim.cmd('source'..path..'ps.vim')
 
+local gp = vim.api.nvim_create_augroup("split vertically", {clear = true})
+vim.api.nvim_create_autocmd("WinNew", {command="wincmd L", group=gp})

@@ -3,6 +3,7 @@ local o = vim.opt
 o.splitbelow = true
 o.splitright = true
 o.mouse = "a"
+o.scrolloff = 8
 o.sidescrolloff = 8
 
 o.tabstop = 4
@@ -22,3 +23,4 @@ o.clipboard="unnamedplus" -- xclip must be installed for this to wrok
 o.termguicolors = true
 
 o.updatetime = 300
+
