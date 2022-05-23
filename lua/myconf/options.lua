@@ -19,8 +19,13 @@ o.wrap = false
 o.hls = false
 o.ru = true
 o.cursorline = true
-o.clipboard="unnamedplus" -- xclip must be installed for this to wrok
+o.clipboard="unnamedplus" -- xclip must be installed for this to work
 o.termguicolors = true
 
+-- fast lsp check
 o.updatetime = 300
+
+-- folding
+o.foldmethod = "indent"
+o.foldlevelstart = 2
 

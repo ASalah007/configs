@@ -48,7 +48,7 @@ km('gt', '<CMD>lua vim.lsp.buf.type_definition()<cr>')
 km('H', '<CMD>lua vim.lsp.buf.hover()<cr>')
 km('<c-k>', '<CMD>lua vim.lsp.buf.signature_help()<cr>')
 km('<leader>rn', '<CMD>lua vim.lsp.buf.rename()<cr>')
-km('<leader>af', '<CMD>lua vim.lsp.buf.code_action()<cr>')
+km('<leader>fa', '<CMD>lua vim.lsp.buf.code_action()<cr>')
 
 
 -- arrow keys for resizing
@@ -66,6 +66,10 @@ local opts = {noremap=true, silent=true};
 -- stay in visual mode after indent
 vim.api.nvim_set_keymap("v", "<", "<gv", opts)
 vim.api.nvim_set_keymap("v", ">", ">gv", opts)
+
+-- dragingn text
+vim.api.nvim_set_keymap("v", "J", ":move '>+1<CR>gv", opts)
+vim.api.nvim_set_keymap("v", "K", ":move '<-2<CR>gv", opts)
 
 
 

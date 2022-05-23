@@ -23,6 +23,7 @@ use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/nvim-cmp'
 use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
+use "rafamadriz/friendly-snippets"
 
 -- nerd tree note: used with font ubuntu Mono Nerd Regular size 15
 use 'kyazdani42/nvim-web-devicons' --  for file icons
@@ -41,7 +42,7 @@ use 'tpope/vim-commentary'
 -- git
 use 'tpope/vim-fugitive'
 
--- vim api
+-- vim api for auto completion
 use 'tjdevries/nlua.nvim'
 
 end)
