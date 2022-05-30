@@ -71,6 +71,5 @@ vim.api.nvim_set_keymap("v", ">", ">gv", opts)
 vim.api.nvim_set_keymap("v", "J", ":move '>+1<CR>gv", opts)
 vim.api.nvim_set_keymap("v", "K", ":move '<-2<CR>gv", opts)
 
-
-
-
+-- close the completion menu
+vim.api.nvim_set_keymap("i", "<C-l>", "<cmd>lua require('cmp').close()<cr>", {noremap=true, silent=true})

@@ -99,6 +99,16 @@ _G.packer_plugins = {
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["nlua.nvim"] = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/nlua.nvim",
+    url = "https://github.com/tjdevries/nlua.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -173,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/vim-eldar",
     url = "https://github.com/agude/vim-eldar"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-vividchalk"] = {
     loaded = true,

@@ -1,16 +1,17 @@
 local o = vim.opt
 
+vim.cmd "set whichwrap+=l,h,<,>,[,]"
+o.delcombine = true
+o.encoding = 'utf-8'
 o.splitbelow = true
 o.splitright = true
 o.mouse = "a"
 o.scrolloff = 8
 o.sidescrolloff = 8
-
 o.tabstop = 4
 o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
-
 o.smartindent = true
 o.autoindent = true
 o.number=true
@@ -28,4 +29,5 @@ o.updatetime = 300
 -- folding
 o.foldmethod = "indent"
 o.foldlevelstart = 2
+
 

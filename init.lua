@@ -17,3 +17,4 @@ vim.cmd('source'..path..'vimwiki.vim')
 
 local gp = vim.api.nvim_create_augroup("split vertically", {clear = true})
 vim.api.nvim_create_autocmd("WinNew", {command="wincmd L", group=gp})
+

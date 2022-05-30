@@ -11,5 +11,4 @@ if (has("autocmd") && !has("gui_running"))
   augroup END
 endif
 
-
 colorscheme onedark
