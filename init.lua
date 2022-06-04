@@ -2,6 +2,7 @@ require 'myconf.mappings'
 require 'myconf.options'
 require 'myconf.mappings'
 
+require 'pconf.telescope'
 require 'pconf.lsp'
 require 'pconf.nvimtree'
 require 'pconf.treesitter'

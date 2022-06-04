@@ -32,6 +32,7 @@ use 'kyazdani42/nvim-tree.lua'
 --  telescope
 use 'nvim-lua/plenary.nvim'
 use 'nvim-telescope/telescope.nvim'
+use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
 --  vimwiki
 use 'vimwiki/vimwiki'

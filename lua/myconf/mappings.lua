@@ -21,7 +21,7 @@ km("<A-l>", ":ls<cr>")
 km("<A-d>", ":bd<cr>")
 
 -- save
-km("<C-s>", ":w<cr>")
+km("<C-s>", "<cmd>w<cr>")
 
 --git
 vim.api.nvim_set_keymap("n", "<leader>g", ":Git ", {noremap=true})
@@ -41,6 +41,8 @@ km("<leader>fl", "<cmd>Telescope buffers<cr>")
 
 -- for lsp
 km('gd', '<CMD>lua vim.lsp.buf.definition()<cr>')
+km('gD', '<CMD>lua vim.lsp.buf.declaration()<cr>')
+km('gi', '<CMD>lua vim.lsp.buf.implementation()<cr>')
 km('gw', '<CMD>lua vim.lsp.buf.document_symbol()<cr>')
 km('gW', '<CMD>lua vim.lsp.buf.workspace_symbol()<cr>')
 km('gr', '<CMD>lua vim.lsp.buf.references()<cr>')
@@ -57,9 +59,6 @@ km("<c-down>",  ":resize -2<CR>")
 km("<c-left>",  ":vertical resize -2<CR>")
 km("<c-right>", ":vertical resize +2<CR>")
 
-km('gD', '<CMD>lua vim.lsp.buf.declaration()<cr>')
-km('gi', '<CMD>lua vim.lsp.buf.implementation()<cr>')
-
 
 local opts = {noremap=true, silent=true};
 
@@ -67,9 +66,12 @@ local opts = {noremap=true, silent=true};
 vim.api.nvim_set_keymap("v", "<", "<gv", opts)
 vim.api.nvim_set_keymap("v", ">", ">gv", opts)
 
--- dragingn text
-vim.api.nvim_set_keymap("v", "J", ":move '>+1<CR>gv", opts)
+-- draging text
+vim.api.nvim_set_keymap("v", "J", ":move '>+1<CR>gv", opts) -- move the visualized area under the line below the last line in the visualized area
 vim.api.nvim_set_keymap("v", "K", ":move '<-2<CR>gv", opts)
 
 -- close the completion menu
-vim.api.nvim_set_keymap("i", "<C-l>", "<cmd>lua require('cmp').close()<cr>", {noremap=true, silent=true})
+vim.api.nvim_set_keymap("i", "<C-f>", "<cmd>lua require('cmp').close()<cr>", {noremap=true, silent=true})
+
+-- undo in insert mode
+vim.api.nvim_set_keymap("i", "<c-z>", "<cmd>undo<cr>", {noremap=true, silent=true})
