@@ -7,8 +7,9 @@ km("<Space>", "<Nop>")
 vim.g.mapleader = " "
 
 
-km("<leader>d", "gg0dG$")
-km("<leader>a", "gg0yG$")
+km("<leader>sd", "gg0dG$")
+km("<leader>ss", "gg0VG$")
+km("<leader>sa", "gg0yG$")
 
 
 -- km("<C-n>", "<CMD>Lexplore 30<CR>")
@@ -47,6 +48,13 @@ km('gk', '<CMD>lua vim.lsp.buf.hover()<cr>')
 km('<c-k>', '<CMD>lua vim.lsp.buf.signature_help()<cr>')
 km('<leader>rn', '<CMD>lua vim.lsp.buf.rename()<cr>')
 km('<leader>fa', '<CMD>lua vim.lsp.buf.code_action()<cr>')
+-- for diagnostics
+km('<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+km('<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
+km('<leader>dd', '<cmd>lua vim.diagnostic.disable()<cr>')
+km('<leader>de', '<cmd>lua vim.diagnostic.enable()<cr>')
+km('<leader>dk', '<cmd>lua vim.diagnostic.open_float()<cr>')
+
 
 -- java specific
 -- km('<A-o>', "<Cmd>lua require'jdtls'.organize_imports()<CR>")
@@ -94,3 +102,6 @@ vim.api.nvim_set_keymap("i", "<C-f>", "<cmd>lua require('cmp').close()<cr>", {no
 
 -- undo in insert mode
 vim.api.nvim_set_keymap("i", "<c-z>", "<cmd>undo<cr>", {noremap=true, silent=true})
+
+
+

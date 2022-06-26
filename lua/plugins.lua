@@ -10,17 +10,17 @@ use 'tomasiser/vim-code-dark'
 --  scratch buffers
 use 'vim-scripts/scratch.vim'
 
--- for better syntax highlighting
+-- for better syntax highlighting, other plugins need this
 use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
 -- for completion
-use 'neovim/nvim-lspconfig'
-use 'williamboman/nvim-lsp-installer'
-use 'hrsh7th/cmp-nvim-lsp'
-use 'hrsh7th/cmp-buffer'
-use 'hrsh7th/cmp-path'
-use 'hrsh7th/cmp-cmdline'
-use 'hrsh7th/nvim-cmp'
+use 'williamboman/nvim-lsp-installer' -- easily install lsp
+use 'neovim/nvim-lspconfig'           -- lsp configurations
+use 'hrsh7th/nvim-cmp'                -- completion engine
+use 'hrsh7th/cmp-nvim-lsp'            -- for lsp
+use 'hrsh7th/cmp-path'                -- for path comeption
+use 'hrsh7th/cmp-cmdline'             -- cmdline completion
+use 'hrsh7th/cmp-buffer'              -- for buffer text
 -- snip
 use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
@@ -58,6 +58,8 @@ use {
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 
+-- gitsigns
+use 'lewis6991/gitsigns.nvim'
 end)
 
 

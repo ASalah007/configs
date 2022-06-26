@@ -24,6 +24,9 @@ o.clipboard="unnamedplus" -- xclip must be installed for this to work
 o.termguicolors = true
 o.smartcase = true
 
+-- for nvim-cmp
+vim.opt.completeopt= {menu,menuone,noselect,preview}
+
 -- fast lsp check
 o.updatetime = 300
 

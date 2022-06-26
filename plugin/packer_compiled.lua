@@ -99,6 +99,21 @@ _G.packer_plugins = {
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["nlua.nvim"] = {
     loaded = true,
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/nlua.nvim",
@@ -108,11 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-jdtls"] = {
-    loaded = true,
-    path = "/home/asalah007/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
-    url = "https://github.com/mfussenegger/nvim-jdtls"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,

@@ -7,9 +7,8 @@ require 'pconf.completion'
 require 'pconf.nvimtree'
 require 'pconf.treesitter'
 require 'pconf.lualine'
+require 'pconf.gitsigns'
 require 'plugins'
-
-
 
 local source = 'source ~/.config/nvim/vim/'
 
