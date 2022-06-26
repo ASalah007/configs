@@ -18,16 +18,18 @@ o.number=true
 o.relativenumber = true
 o.wrap = false
 o.hls = false
-o.ru = true
+o.ruler = true
 o.cursorline = true
 o.clipboard="unnamedplus" -- xclip must be installed for this to work
 o.termguicolors = true
+o.smartcase = true
 
 -- fast lsp check
 o.updatetime = 300
 
 -- folding
-o.foldmethod = "indent"
+o.foldmethod = "manual"
 o.foldlevelstart = 2
 
-
+-- one global status line
+o.laststatus=3
