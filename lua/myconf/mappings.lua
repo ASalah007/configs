@@ -55,10 +55,15 @@ km('<leader>dd', '<cmd>lua vim.diagnostic.disable()<cr>')
 km('<leader>de', '<cmd>lua vim.diagnostic.enable()<cr>')
 km('<leader>dk', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
+-- git signs
 km('<leader>gn', '<cmd>Gitsigns next_hunk<cr>')
 km('<leader>gp', '<cmd>Gitsigns prev_hunk<cr>')
 km('<leader>gk', '<cmd>Gitsigns preview_hunk<cr>')
 km('<leader>gb', '<cmd>Gitsigns blame_line<cr>')
+km('<leader>gs', '<cmd>Gitsigns stage_hunk<cr>')
+km('<leader>gu', '<cmd>Gitsigns undo_stage_hunk<cr>')
+km('<leader>gd', '<cmd>Gitsigns diffthis<cr>')
+km('<leader>gt', '<cmd>Gitsigns toggle_deleted<cr><cmd>Gitsigns toggle_word_diff<cr>')
 
 -- java specific
 -- km('<A-o>', "<Cmd>lua require'jdtls'.organize_imports()<CR>")
@@ -101,11 +106,7 @@ vim.api.nvim_set_keymap("v", ">", ">gv", opts)
 vim.api.nvim_set_keymap("v", "J", ":move '>+1<CR>gv", opts) -- move the visualized area under the line below the last line in the visualized area
 vim.api.nvim_set_keymap("v", "K", ":move '<-2<CR>gv", opts)
 
--- close the completion menu
-vim.api.nvim_set_keymap("i", "<C-f>", "<cmd>lua require('cmp').close()<cr>", {noremap=true, silent=true})
-
 -- undo in insert mode
 vim.api.nvim_set_keymap("i", "<c-z>", "<cmd>undo<cr>", {noremap=true, silent=true})
-
 
 

@@ -35,4 +35,3 @@ vim.api.nvim_create_autocmd("BufEnter",{
     command = [[normal 4l]],
     group = wk
 })
-

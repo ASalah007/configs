@@ -18,12 +18,16 @@ use 'williamboman/nvim-lsp-installer' -- easily install lsp
 use 'neovim/nvim-lspconfig'           -- lsp configurations
 use 'hrsh7th/nvim-cmp'                -- completion engine
 use 'hrsh7th/cmp-nvim-lsp'            -- for lsp
-use 'hrsh7th/cmp-path'                -- for path comeption
+use 'hrsh7th/cmp-path'                -- for path completion
 use 'hrsh7th/cmp-cmdline'             -- cmdline completion
 use 'hrsh7th/cmp-buffer'              -- for buffer text
+use 'hrsh7th/cmp-nvim-lua'            -- for vim completion
+
 -- snip
 use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
+use "rafamadriz/friendly-snippets"
+
 -- icons
 use 'onsails/lspkind.nvim'
 
