@@ -55,6 +55,10 @@ km('<leader>dd', '<cmd>lua vim.diagnostic.disable()<cr>')
 km('<leader>de', '<cmd>lua vim.diagnostic.enable()<cr>')
 km('<leader>dk', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
+km('<leader>gn', '<cmd>Gitsigns next_hunk<cr>')
+km('<leader>gp', '<cmd>Gitsigns prev_hunk<cr>')
+km('<leader>gk', '<cmd>Gitsigns preview_hunk<cr>')
+km('<leader>gb', '<cmd>Gitsigns blame_line<cr>')
 
 -- java specific
 -- km('<A-o>', "<Cmd>lua require'jdtls'.organize_imports()<CR>")
