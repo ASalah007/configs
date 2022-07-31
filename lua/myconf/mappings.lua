@@ -34,7 +34,6 @@ km("<leader>ff", "<cmd>Telescope find_files<cr>")
 km("<leader>fg", "<cmd>Telescope live_grep<cr>")
 km("<leader>fb", "<cmd>Telescope buffers<cr>")
 km("<leader>fh", "<cmd>Telescope help_tags<cr>")
-km("<leader>fl", "<cmd>Telescope buffers<cr>")
 
 -- for lsp
 km('gd', '<CMD>lua vim.lsp.buf.definition()<cr>')
@@ -48,6 +47,7 @@ km('gk', '<CMD>lua vim.lsp.buf.hover()<cr>')
 km('<c-k>', '<CMD>lua vim.lsp.buf.signature_help()<cr>')
 km('<leader>rn', '<CMD>lua vim.lsp.buf.rename()<cr>')
 km('<leader>fa', '<CMD>lua vim.lsp.buf.code_action()<cr>')
+
 -- for diagnostics
 km('<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 km('<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
@@ -63,6 +63,7 @@ km('<leader>gb', '<cmd>Gitsigns blame_line<cr>')
 km('<leader>gs', '<cmd>Gitsigns stage_hunk<cr>')
 km('<leader>gu', '<cmd>Gitsigns undo_stage_hunk<cr>')
 km('<leader>gd', '<cmd>Gitsigns diffthis<cr>')
+km('<leader>gr', '<cmd>Gitsigns reset_hunk<cr>')
 km('<leader>gt', '<cmd>Gitsigns toggle_deleted<cr><cmd>Gitsigns toggle_word_diff<cr>')
 
 -- java specific

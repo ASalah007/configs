@@ -3,7 +3,6 @@ local cmp = require'cmp'
 local lspkind = require('lspkind')
 local kind_icons = { Text = "", Method = "", Function = "", Constructor = "", Field = "", Variable = "", Class = "ﴯ", Interface = "", Module = "", Property = "ﰠ", Unit = "", Value = "", Enum = "", Keyword = "", Snippet = "", Color = "", File = "", Reference = "", Folder = "", EnumMember = "", Constant = "", Struct = "", Event = "", Operator = "", TypeParameter = "" }
 
-
 -- load snippets
 require("luasnip/loaders/from_vscode").lazy_load()
 cmp.setup({
@@ -13,6 +12,7 @@ cmp.setup({
             require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
         end,
     },
+    
     window = {
         -- completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
@@ -114,35 +114,37 @@ local lspconfig = require("lspconfig")
 local function on_attach(client, bufnr)
     -- set up buffer keymaps, etc.
 end
+lsp_installer.setup()
+lspconfig.jdtls.setup { on_attach = on_attach , capabilities=capabilities}
+lspconfig.sumneko_lua.setup {
+    on_attach = on_attach,
+    capabilities=capabilities,
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim', 'use' }
+            },
+        }
+    }
+}
 
--- lspconfig.jdtls.setup { on_attach = on_attach , capabilities=capabilities}
--- lspconfig.sumneko_lua.setup { on_attach = on_attach , capabilities=capabilities}
 lspconfig.tsserver.setup { on_attach = on_attach , capabilities=capabilities}
 lspconfig.clangd.setup { on_attach = on_attach , capabilities=capabilities}
 lspconfig.sqlls.setup { on_attach = on_attach , capabilities=capabilities}
-
--- suppress error messages from lang servers
-vim.notify = function(msg, log_level, _opts)
-    if msg:match("exit code") then
-        return
-    end
-    if log_level == vim.log.levels.ERROR then
-        vim.api.nvim_err_writeln(msg)
-    else
-        vim.api.nvim_echo({{msg}}, true, {})
-    end
-end
-
--- vim api completion
--- require('nlua.lsp.nvim').setup(require('lspconfig'), {
-    --   -- Include globals you want to tell the LSP are real :)
-    --   globals = {
-        --     -- Colorbuddy
-        --     "Color", "c", "Group", "g", "s",
-        --   }
-        -- })
+lspconfig.jedi_language_server.setup { on_attach = on_attach , capabilities=capabilities}
 
 -- diagnostics look
+ local signs = {
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
+  }
+
+  for _, sign in ipairs(signs) do
+    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+  end
+
 vim.diagnostic.config({
     underline={
         severity=vim.diagnostic.severity.ERROR
@@ -150,22 +152,33 @@ vim.diagnostic.config({
     virtual_text ={
         severity=vim.diagnostic.severity.ERROR
     },
+    sign = {
+        active = signs
+    },
+    float={
+        header=""
+    }
 })
 
--- add vim, use as global variable
-lsp_installer.on_server_ready(function(server)
-    local opts = {}
-    if server.name == "sumneko_lua" then
-        opts = {
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = { 'vim', 'use' }
-                    },
-                }
-            }
-        }
-    end
-    server:setup(opts)
-end)
+-- bordered window for diagnostics
+-- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover,{
+--     border ="rounded"
+-- })
+
+-- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help,{
+--     border ="rounded"
+-- })
+
+-- suppress error messages from lang servers
+-- vim.notify = function(msg, log_level, _opts)
+--     if msg:match("exit code") then
+--         return
+--     end
+--     if log_level == vim.log.levels.ERROR then
+--         vim.api.nvim_err_writeln(msg)
+--     else
+--         vim.api.nvim_echo({{msg}}, true, {})
+--     end
+-- end
+
 

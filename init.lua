@@ -1,14 +1,18 @@
+
 require 'myconf.mappings'
 require 'myconf.options'
 require 'myconf.mappings'
 
+require 'plugins'
 require 'pconf.telescope'
 require 'pconf.completion'
 require 'pconf.nvimtree'
 require 'pconf.treesitter'
 require 'pconf.lualine'
 require 'pconf.gitsigns'
-require 'plugins'
+require 'pconf.toggleterm'
+require 'pconf.nullls'
+
 
 local source = 'source ~/.config/nvim/vim/'
 
@@ -35,3 +39,9 @@ vim.api.nvim_create_autocmd("BufEnter",{
     command = [[normal 4l]],
     group = wk
 })
+
+
+
+
+
+

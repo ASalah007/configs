@@ -26,7 +26,7 @@ use 'hrsh7th/cmp-nvim-lua'            -- for vim completion
 -- snip
 use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
-use "rafamadriz/friendly-snippets"
+-- use "rafamadriz/friendly-snippets"
 
 -- icons
 use 'onsails/lspkind.nvim'
@@ -64,6 +64,15 @@ use {
 
 -- gitsigns
 use 'lewis6991/gitsigns.nvim'
+
+-- terminal on the fly 
+use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+  require("toggleterm").setup()
+end}
+
+-- for formatting
+use 'jose-elias-alvarez/null-ls.nvim' 
+
 end)
 
 
